@@ -963,27 +963,22 @@ footer{
 
       <div class="pillars-grid" style="margin-top:3rem">
         <div class="glass-card pillar-card reveal">
-          <div class="pillar-icon">📖</div>
           <div class="pillar-title">Feminist Literacy</div>
           <p class="pillar-text">Core values, movement history, key figures, and feminist literature — making knowledge accessible and transformative.</p>
         </div>
         <div class="glass-card pillar-card reveal" style="transition-delay:0.1s">
-          <div class="pillar-icon">📡</div>
           <div class="pillar-title">Living Archive</div>
           <p class="pillar-text">Documenting and sharing the latest global developments in feminism — from grassroots movements to policy change.</p>
         </div>
         <div class="glass-card pillar-card reveal" style="transition-delay:0.2s">
-          <div class="pillar-icon">💬</div>
           <div class="pillar-title">Thoughtful Discourse</div>
           <p class="pillar-text">Fostering thoughtful, nuanced discussions and debates about feminism — space for every voice and perspective.</p>
         </div>
         <div class="glass-card pillar-card reveal" style="transition-delay:0.3s">
-          <div class="pillar-icon">🌸</div>
           <div class="pillar-title">Safe Stories</div>
           <p class="pillar-text">A secure, supportive platform where women share their experiences, reclaim their narratives, and find community.</p>
         </div>
         <div class="glass-card pillar-card reveal" style="transition-delay:0.4s">
-          <div class="pillar-icon">⚡</div>
           <div class="pillar-title">Bold Innovation</div>
           <p class="pillar-text">Pioneering programs, initiatives and technologies designed to enhance the safety, wellbeing and empowerment of women.</p>
         </div>
@@ -1507,7 +1502,7 @@ footer{
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2025 FemiRISE. All rights reserved.</span>
+    <span>© 2026 FemiRISE. All rights reserved.</span>
     <span style="display:flex;align-items:center;gap:0.5rem">
       <span style="width:6px;height:6px;border-radius:50%;background:rgba(130,2,99,0.7);display:inline-block"></span>
       Rise Together
@@ -1516,9 +1511,9 @@ footer{
 </footer>
 
 <script>
-// ——————————————————————————————
+
 // CUSTOM CURSOR
-// ——————————————————————————————
+
 const cursor = document.getElementById('cursor');
 const cursorTrail = document.getElementById('cursorTrail');
 const liquidBlob = document.getElementById('liquidBlob');
@@ -1539,9 +1534,9 @@ document.querySelectorAll('a,button,.btn-primary,.btn-ghost,.glass-card,.connect
   el.addEventListener('mouseleave',()=>{cursor.style.transform='translate(-50%,-50%) scale(1)';cursorTrail.style.transform='translate(-50%,-50%) scale(1)'});
 });
 
-// ——————————————————————————————
+
 // PAGE ROUTING
-// ——————————————————————————————
+
 function showPage(id){
   document.querySelectorAll('.page').forEach(p=>{p.classList.remove('active');p.style.display='none'});
   const el=document.getElementById('page-'+id);
@@ -1565,9 +1560,9 @@ function toggleMobile(){
   m.style.display=m.style.display==='flex'?'none':'flex';
 }
 
-// ——————————————————————————————
+
 // SCROLL REVEAL
-// ——————————————————————————————
+
 function observeReveal(){
   const obs=new IntersectionObserver((entries)=>{
     entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}});
@@ -1577,9 +1572,9 @@ function observeReveal(){
 observeReveal();
 window.addEventListener('scroll',observeReveal);
 
-// ——————————————————————————————
+
 // ESSAYS DATA
-// ——————————————————————————————
+
 const essays=[
   {tag:'theory',title:'The Waves That Shaped Us: A Feminist History',excerpt:'From first-wave suffrage to fourth-wave digital activism — tracing the movements that built the world we live in and the one we\'re still fighting for.',author:'FemiRISE Editorial',date:'May 2025'},
   {tag:'culture',title:'Reclaiming the Gaze: Women in Visual Art',excerpt:'How feminist artists across decades have challenged, subverted and reclaimed the male gaze — from the Guerrilla Girls to contemporary digital spaces.',author:'Vyonnie Khoo',date:'Apr 2025'},
@@ -1620,9 +1615,9 @@ function filterEssays(tag,btn){
   renderEssays();
 }
 
-// ——————————————————————————————
+
 // NAV SCROLL EFFECT
-// ——————————————————————————————
+
 window.addEventListener('scroll',()=>{
   const nav=document.getElementById('mainNav');
   nav.style.background=window.scrollY>50?'rgba(5,0,12,0.88)':'rgba(8,0,16,0.55)';
