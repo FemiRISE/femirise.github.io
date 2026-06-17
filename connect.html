@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FemiRISE — Feminist Organisation Since 2026</title>
+
+<!-- SEO -->
+<meta name="description" content="FemiRISE is a feminist organization dedicated to feminist education, women's empowerment, leadership development, community building, and advancing gender equality through local chapters, events, and initiatives worldwide.">
+<meta name="keywords" content="FemiRISE femirise femiRISE, feminist organization, feminist education, feminist literacy, women's empowerment, gender equality, women's leadership, feminist movement, women's rights, women support network, feminist community, social impact, chapter leadership, women advocacy, women wellbeing, student advocacy, volunteer, ivy league, extracurricular">
+<meta property="og:title" content="femiRISE">
+<meta property="og:description" content="Empowering women through feminist education, leadership, community, and action. Join a growing global network committed to gender equality and women's empowerment.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="FemiRISE">
+<meta name="twitter:description" content="A global feminist community promoting education, empowerment, leadership, and meaningful action for women and gender equality.">
+<!-- END OF SEO -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Cormorant+Upright:wght@300;400;500&family=Jost:wght@200;300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+<script src="./script.js" defer></script>
+</head>
+<body>
+
+<!-- Global BG Blobs 
+<div class="bg-blobs">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <div class="blob blob-4"></div>
+</div>
+Liquid blob that follows mouse loosely
+<div class="liquid-blob" id="liquidBlob"></div> -->
+
+<!-- NAV -->
+<nav id="mainNav">
+  <div class="nav-logo"><a href="index.html"><img src="./media/femirise-logo.png"></a></div>
+  <div class="nav-links">
+    <a href="index.html" class="nav-link" data-page="home">Home</a>
+    <a href="about.html" class="nav-link" data-page="about">About Us</a>
+    <a href="structure.html" class="nav-link" data-page="how">How We Work</a>
+    <a href="essays.html" class="nav-link" data-page="essays">Essays</a>
+    <a href="connect.html" class="nav-link active" data-page="connect">Connect</a>
+    <a class="nav-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSfwPqKustc7kkd7kCYtFqLqy8rkv79rQlx8xS-8RfyrfZ6W7Q/viewform?usp=dialog" target="_blank">Join Now</a>
+  </div>
+  <div class="nav-hamburger" onclick="toggleMobile()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div id="mobileMenu" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(5,0,12,0.97);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;backdrop-filter:blur(30px)">
+  <div style="position:absolute;top:1.4rem;right:1.5rem;font-size:1.5rem;color:rgba(203,156,242,0.7);cursor:pointer" onclick="toggleMobile()">✕</div>
+  <a href="index.html" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--ivory);text-decoration:none;cursor:pointer" onclick="showPage('home');toggleMobile()">Home</a>
+  <a href="about.html" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--ivory);text-decoration:none;cursor:pointer" onclick="showPage('about');toggleMobile()">About Us</a>
+  <a href="structure.html" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--ivory);text-decoration:none;cursor:pointer" onclick="showPage('how');toggleMobile()">How We Work</a>
+  <a href="essays.html" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--ivory);text-decoration:none;cursor:pointer" onclick="showPage('essays');toggleMobile()">Essays</a>
+  <a href="connect.html" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--ivory);text-decoration:none;cursor:pointer" onclick="showPage('connect');toggleMobile()">Connect</a>
+  <a class="btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfwPqKustc7kkd7kCYtFqLqy8rkv79rQlx8xS-8RfyrfZ6W7Q/viewform?usp=dialog" target="_blank"><span>Join Now</span></a>
+</div>
+
+<div id="page-connect" class="page">
+  <div class="connect-wrap">
+    <div class="section-label" style="margin-bottom:1rem">Get Involved</div>
+    <h1 class="section-title reveal" style="margin-bottom:0.8rem">Connect &amp; <em>join us</em></h1>
+    <p style="font-family:'Jost',sans-serif;font-weight:300;font-size:0.92rem;color:rgba(240,244,239,0.5);line-height:1.85;max-width:580px;margin-bottom:0" class="reveal">
+      Ready to take the next step? Whether joining as a member, scheduling a conversation, or following our journey — we're here.
+    </p>
+
+    <div class="connect-grid reveal">
+      <a class="connect-card" href="https://docs.google.com/forms/d/e/1FAIpQLSfwPqKustc7kkd7kCYtFqLqy8rkv79rQlx8xS-8RfyrfZ6W7Q/viewform?usp=dialog" target="_blank">
+        <div class="connect-card-title">Join as a General Member</div>
+        <p class="connect-card-desc">Fill in our membership form and become part of the growing FemiRISE community. Events, newsletters, and more await you.</p>
+        <div class="connect-cta-link">Apply Now →</div>
+      </a>
+      <a class="connect-card" href="https://docs.google.com/forms/d/e/1FAIpQLSfwPqKustc7kkd7kCYtFqLqy8rkv79rQlx8xS-8RfyrfZ6W7Q/viewform?usp=dialog" target="_blank">
+        <div class="connect-card-title">Apply as Chapter Leader</div>
+        <p class="connect-card-desc">Ready to lead? Submit your Chapter Leader application and help establish feminism in your region.</p>
+        <div class="connect-cta-link">Apply Now →</div>
+      </a>
+      <a class="connect-card" href="https://calendly.com" target="_blank">
+        <div class="connect-card-title">Book a Meeting</div>
+        <p class="connect-card-desc">Schedule a one-on-one with a committee member to ask questions, confirm your position, or explore collaboration.</p>
+        <div class="connect-cta-link">Open Calendly →</div>
+      </a>
+      <a class="connect-card" href="https://docs.google.com/forms/d/e/1FAIpQLSfwPqKustc7kkd7kCYtFqLqy8rkv79rQlx8xS-8RfyrfZ6W7Q/viewform?usp=dialog" target="_blank">
+        <div class="connect-card-title">Submit an Essay</div>
+        <p class="connect-card-desc">Share your feminist perspective, research, or personal essay with our community through our editorial platform.</p>
+        <div class="connect-cta-link">Submit Here →</div>
+      </a>
+    </div>
+
+    <!-- SOCIAL MEDIA -->
+    <div style="margin-top:4rem">
+      <div class="section-label" style="margin-bottom:1.2rem">Find Us Online</div>
+      <h3 style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:1.5rem;color:var(--ivory);margin-bottom:1.5rem">Follow <em>our journey</em></h3>
+      <div class="socials-row reveal">
+        <a class="social-pill" href="https://instagram.com/femiriseorg" target="_blank">
+          <span class="social-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"></span> @femiriseorg
+        </a>
+        <a class="social-pill" href="https://tiktok.com/@femirise" target="_blank">
+          <span class="social-icon"><img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/tiktok-simplified-white-icon.png"></span> @femirise
+        </a>
+        <a class="social-pill" href="https://twitter.com/femiriseorg" target="_blank">
+          <span class="social-icon">𝕏</span> @femiriseorg
+        </a>
+        <a class="social-pill" href="https://linkedin.com/company/femirise" target="_blank">
+          <span class="social-icon"><img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/linkedin-app-white-icon.png"></span> FemiRISE
+        </a>
+        <a class="social-pill" href="https://facebook.com/femirise" target="_blank">
+          <span class="social-icon"><img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/facebook-app-round-white-icon.png"></span> FemiRISE
+        </a>
+      </div>
+    </div>
+
+    <!-- NEWSLETTER -->
+    <div class="newsletter-box reveal" style="margin-top:4rem">
+      <div class="section-label" style="justify-content:center;margin-bottom:0.8rem">Stay Updated</div>
+      <div class="newsletter-title">Join our newsletter</div>
+      <p class="newsletter-sub">Monthly dispatches of feminist news, event announcements, essays and movement updates — delivered with care.</p>
+      <div class="newsletter-form">
+        <input type="email" class="newsletter-input" placeholder="your@email.com">
+        <a class="btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfwPqKustc7kkd7kCYtFqLqy8rkv79rQlx8xS-8RfyrfZ6W7Q/viewform?usp=dialog" target="_blank"><span>Subscribe</span></a>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div style="margin-top:3rem;padding:2.5rem;border-radius:20px;border:1px solid rgba(203,156,242,0.1);background:rgba(240,244,239,0.02)" class="reveal">
+      <div class="section-label" style="margin-bottom:0.8rem">Direct Contact</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--ivory);margin-bottom:0.5rem">General Enquiries</div>
+      <p style="font-family:'Jost',sans-serif;font-weight:300;font-size:0.88rem;color:rgba(240,244,239,0.5);line-height:1.7">
+        For chapter-specific queries, please head to our website and contact the respective chapter directly. For general organisational matters, reach us via our social channels or the form above.
+      </p>
+    </div>
+  </div>
+</div><!-- /page-connect -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-logo">FemiRISE</span>
+      <p class="footer-about">A feminist organisation advancing literacy, community and innovation — one chapter at a time. Rise together.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Navigate</div>
+      <ul class="footer-links">
+        <li><a onclick="showPage('home')">Home</a></li>
+        <li><a onclick="showPage('about')">About Us</a></li>
+        <li><a onclick="showPage('how')">How We Work</a></li>
+        <li><a onclick="showPage('essays')">Essays</a></li>
+        <li><a onclick="showPage('connect')">Connect</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Join</div>
+      <ul class="footer-links">
+        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfwPqKustc7kkd7kCYtFqLqy8rkv79rQlx8xS-8RfyrfZ6W7Q/viewform?usp=dialog" target="_blank">General Member</a></li>
+        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfwPqKustc7kkd7kCYtFqLqy8rkv79rQlx8xS-8RfyrfZ6W7Q/viewform?usp=dialog" target="_blank">Chapter Leader</a></li>
+        <li><a href="https://calendly.com" target="_blank">Book a Meeting</a></li>
+        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfwPqKustc7kkd7kCYtFqLqy8rkv79rQlx8xS-8RfyrfZ6W7Q/viewform?usp=dialog" target="_blank">Submit Essay</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Social</div>
+      <ul class="footer-links">
+        <li><a href="https://instagram.com/femirise" target="_blank">Instagram</a></li>
+        <li><a href="https://tiktok.com/@femirise" target="_blank">TikTok</a></li>
+        <li><a href="https://twitter.com/femiriseorg" target="_blank">X / Twitter</a></li>
+        <li><a href="https://linkedin.com/company/femirise" target="_blank">LinkedIn</a></li>
+        <li><a href="https://facebook.com/femirise" target="_blank">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 FemiRISE. All rights reserved.</span>
+    <span style="display:flex;align-items:center;gap:0.5rem">
+      <span style="width:6px;height:6px;border-radius:50%;background:rgba(130,2,99,0.7);display:inline-block"></span>
+      Rise Together
+    </span>
+  </div>
+</footer>
+
+</body>
+</html>

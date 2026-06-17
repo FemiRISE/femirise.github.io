@@ -1,42 +1,23 @@
-// const cursor = document.getElementById('cursor');
-// const cursorTrail = document.getElementById('cursorTrail');
-// const liquidBlob = document.getElementById('liquidBlob');
-// let mx=0,my=0,tx=0,ty=0,lx=0,ly=0;
-// document.addEventListener('mousemove',e=>{
-//   mx=e.clientX;my=e.clientY;
-//   cursor.style.left=mx+'px';cursor.style.top=my+'px';
-// });
-// function animCursor(){
-//   tx+=(mx-tx)*0.12;ty+=(my-ty)*0.12;
-//   cursorTrail.style.left=tx+'px';cursorTrail.style.top=ty+'px';
-//   lx+=(mx-lx)*0.04;ly+=(my-ly)*0.04;
-//   liquidBlob.style.left=(lx-100)+'px';liquidBlob.style.top=(ly-100)+'px';
-//   requestAnimationFrame(animCursor);
-// }animCursor();
-// document.querySelectorAll('a,button,.btn-primary,.btn-ghost,.glass-card,.connect-card,.essay-card,.team-card,.social-pill,.filter-btn,.nav-link,.nav-cta,.nav-logo').forEach(el=>{
-//   el.addEventListener('mouseenter',()=>{cursor.style.transform='translate(-50%,-50%) scale(2.2)';cursorTrail.style.transform='translate(-50%,-50%) scale(1.3)'});
-//   el.addEventListener('mouseleave',()=>{cursor.style.transform='translate(-50%,-50%) scale(1)';cursorTrail.style.transform='translate(-50%,-50%) scale(1)'});
-// });
+// const root = document.documentElement;
+// const toggleBtn = document.getElementById("themeToggle");
 
-
-// PAGE ROUTING
-
-// function showPage(id){
-//   document.querySelectorAll('.page').forEach(p=>{p.classList.remove('active');p.style.display='none'});
-//   const el=document.getElementById('page-'+id);
-//   if(el){el.style.display='block';setTimeout(()=>el.classList.add('active'),10)}
-//   document.querySelectorAll('.nav-link').forEach(l=>{
-//     l.classList.toggle('active',l.dataset.page===id);
-//   });
-//   window.scrollTo({top:0,behavior:'smooth'});
-//   setTimeout(observeReveal,100);
-//   if(id==='essays')renderEssays();
+// // load saved theme
+// const savedTheme = localStorage.getItem("theme");
+// if (savedTheme) {
+//   root.setAttribute("data-theme", savedTheme);
 // }
 
-// // Init pages display
-// document.querySelectorAll('.page').forEach(p=>{
-//   if(!p.classList.contains('active'))p.style.display='none';
-// });
+// // toggle function
+// function toggleTheme() {
+//   const current = root.getAttribute("data-theme");
+//   const next = current === "dark" ? "light" : "dark";
+
+//   root.setAttribute("data-theme", next);
+//   localStorage.setItem("theme", next);
+// }
+
+// // click handler
+// toggleBtn?.addEventListener("click", toggleTheme);
 
 // Mobile menu
 function toggleMobile(){

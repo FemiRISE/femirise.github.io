@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FemiRISE — Feminist Organisation Since 2026</title>
+
+<!-- SEO -->
+<meta name="description" content="FemiRISE is a feminist organization dedicated to feminist education, women's empowerment, leadership development, community building, and advancing gender equality through local chapters, events, and initiatives worldwide.">
+<meta name="keywords" content="FemiRISE femirise femiRISE, feminist organization, feminist education, feminist literacy, women's empowerment, gender equality, women's leadership, feminist movement, women's rights, women support network, feminist community, social impact, chapter leadership, women advocacy, women wellbeing, student advocacy, volunteer, ivy league, extracurricular">
+<meta property="og:title" content="femiRISE">
+<meta property="og:description" content="Empowering women through feminist education, leadership, community, and action. Join a growing global network committed to gender equality and women's empowerment.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="FemiRISE">
+<meta name="twitter:description" content="A global feminist community promoting education, empowerment, leadership, and meaningful action for women and gender equality.">
+<!-- END OF SEO -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Cormorant+Upright:wght@300;400;500&family=Jost:wght@200;300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+<script src="./script.js" defer></script>
+</head>
+<body>
+
+<!-- Global BG Blobs 
+<div class="bg-blobs">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <div class="blob blob-4"></div>
+</div>
+Liquid blob that follows mouse loosely
+<div class="liquid-blob" id="liquidBlob"></div> -->
+
+<!-- NAV -->
+<nav id="mainNav">
+  <div class="nav-logo"><a href="index.html"><img src="./media/femirise-logo.png"></a></div>
+  <div class="nav-links">
+    <a href="index.html" class="nav-link" data-page="home">Home</a>
+    <a href="about.html" class="nav-link" data-page="about">About Us</a>
+    <a href="structure.html" class="nav-link active" data-page="how">How We Work</a>
+    <a href="essays.html" class="nav-link" data-page="essays">Essays</a>
+    <a href="connect.html" class="nav-link" data-page="connect">Connect</a>
+    <a class="nav-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSfwPqKustc7kkd7kCYtFqLqy8rkv79rQlx8xS-8RfyrfZ6W7Q/viewform?usp=dialog" target="_blank">Join Now</a>
+  </div>
+  <div class="nav-hamburger" onclick="toggleMobile()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div id="mobileMenu" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(5,0,12,0.97);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;backdrop-filter:blur(30px)">
+  <div style="position:absolute;top:1.4rem;right:1.5rem;font-size:1.5rem;color:rgba(203,156,242,0.7);cursor:pointer" onclick="toggleMobile()">✕</div>
+  <a href="index.html" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--ivory);text-decoration:none;cursor:pointer" onclick="showPage('home');toggleMobile()">Home</a>
+  <a href="about.html" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--ivory);text-decoration:none;cursor:pointer" onclick="showPage('about');toggleMobile()">About Us</a>
+  <a href="structure.html" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--ivory);text-decoration:none;cursor:pointer" onclick="showPage('how');toggleMobile()">How We Work</a>
+  <a href="essays.html" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--ivory);text-decoration:none;cursor:pointer" onclick="showPage('essays');toggleMobile()">Essays</a>
+  <a href="connect.html" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--ivory);text-decoration:none;cursor:pointer" onclick="showPage('connect');toggleMobile()">Connect</a>
+  <a class="btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfwPqKustc7kkd7kCYtFqLqy8rkv79rQlx8xS-8RfyrfZ6W7Q/viewform?usp=dialog" target="_blank"><span>Join Now</span></a>
+</div>
+
+<div id="page-how" class="page">
+  <div class="tiers-wrap">
+    <div class="section-label" style="margin-bottom:1rem">Membership</div>
+    <h1 class="section-title reveal" style="margin-bottom:0.5rem">How we <em>work together</em></h1>
+    <p style="font-family:'Jost',sans-serif;font-weight:300;font-size:0.92rem;color:rgba(240,244,239,0.5);line-height:1.85;max-width:580px;margin-bottom:4rem" class="reveal">
+      FemiRISE operates through three interconnected membership tiers, each designed for a different level of commitment and impact.
+    </p>
+
+    <!-- TIER 1 -->
+    <div class="tier-section glass-card reveal" style="padding:2.5rem">
+      <div class="tier-header">
+        <div class="tier-badge">I</div>
+        <div>
+          <div class="tier-label">Tier One</div>
+          <div class="tier-name">General Members</div>
+          <span class="tier-commit">Low Commitment</span>
+        </div>
+      </div>
+      <div class="tier-body">
+        <ul class="tier-list">
+          <li>Participate in events, initiatives and programs hosted by the organisation</li>
+          <li>Join existing chapters in their region, state or country</li>
+          <li>Apply to be a Chapter Leader if no chapter exists in your region yet</li>
+        </ul>
+        <div class="steps-flow" style="margin-top:2.5rem">
+          <div style="font-family:'Jost',sans-serif;font-weight:200;font-size:0.7rem;letter-spacing:0.25em;text-transform:uppercase;color:rgba(203,156,242,0.5);margin-bottom:1.2rem">Getting Started</div>
+          <div class="step-item">
+            <div class="step-num-wrap"><div class="step-num">1</div><div class="step-line-v"></div></div>
+            <div class="step-content">
+              <div class="step-title">Fill in the Recruitment Form</div>
+              <p class="step-desc">Complete our <a href="https://docs.google.com/forms/d/e/1FAIpQLSfwPqKustc7kkd7kCYtFqLqy8rkv79rQlx8xS-8RfyrfZ6W7Q/viewform?usp=dialog" target="_blank" style="color:var(--lavender)">general member application form</a> — it takes just a few minutes.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num-wrap"><div class="step-num">2</div></div>
+            <div class="step-content">
+              <div class="step-title">Receive Email Updates</div>
+              <p class="step-desc">We'll email you with updates on upcoming events, programs and initiatives relevant to you.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tier-connector"></div>
+
+    <!-- TIER 2 -->
+    <div class="tier-section glass-card reveal" style="padding:2.5rem">
+      <div class="tier-header">
+        <div class="tier-badge">II</div>
+        <div>
+          <div class="tier-label">Tier Two</div>
+          <div class="tier-name">Chapter Leaders</div>
+          <span class="tier-commit">High Impact</span>
+        </div>
+      </div>
+      <div class="tier-body">
+        <ul class="tier-list">
+          <li>Establish and officially register a chapter in your region, state or country</li>
+          <li>Recruit and lead a team to organise events — minimum once per month (exceptions granted with management notification)</li>
+          <li>Survey and document the impact of each event — this is mandatory and integral to our mission</li>
+          <li>A Chapter Mentor can be assigned upon request to guide you through the process</li>
+        </ul>
+        <div class="steps-flow" style="margin-top:2.5rem">
+          <div style="font-family:'Jost',sans-serif;font-weight:200;font-size:0.7rem;letter-spacing:0.25em;text-transform:uppercase;color:rgba(203,156,242,0.5);margin-bottom:1.2rem">Getting Started</div>
+          <div class="step-item">
+            <div class="step-num-wrap"><div class="step-num">1</div><div class="step-line-v"></div></div>
+            <div class="step-content">
+              <div class="step-title">Fill in the Recruitment Form</div>
+              <p class="step-desc">Submit your <a href="https://docs.google.com/forms/d/e/1FAIpQLSfwPqKustc7kkd7kCYtFqLqy8rkv79rQlx8xS-8RfyrfZ6W7Q/viewform?usp=dialog" target="_blank" style="color:var(--lavender)">Chapter Leader application</a> with your region and initial vision.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num-wrap"><div class="step-num">2</div><div class="step-line-v"></div></div>
+            <div class="step-content">
+              <div class="step-title">Schedule a Committee Meeting</div>
+              <p class="step-desc">Book a session via <a href="https://calendly.com" target="_blank" style="color:var(--lavender)">Calendly</a> to confirm your position. Come prepared with questions and a rough plan.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num-wrap"><div class="step-num">3</div><div class="step-line-v"></div></div>
+            <div class="step-content">
+              <div class="step-title">Establish Chapter Channels</div>
+              <p class="step-desc">Set up official communication channels (Instagram, Discord, WhatsApp etc.) aligned with local needs and organisational guidelines.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num-wrap"><div class="step-num">4</div></div>
+            <div class="step-content">
+              <div class="step-title">Begin Recruiting &amp; Your First Event</div>
+              <p class="step-desc">Start building your local team and plan your inaugural event. You've got this — and we're here to support you every step of the way.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tier-connector"></div>
+
+    <!-- TIER 3 -->
+    <div class="tier-section glass-card reveal" style="padding:2.5rem;border-color:rgba(203,156,242,0.2)">
+      <div class="tier-header">
+        <div class="tier-badge" style="background:linear-gradient(135deg,rgba(203,156,242,0.3),rgba(130,2,99,0.2));border-color:rgba(203,156,242,0.5)">III</div>
+        <div>
+          <div class="tier-label">Tier Three</div>
+          <div class="tier-name">Committee Members</div>
+          <span class="tier-commit" style="background:rgba(130,2,99,0.15);border-color:rgba(130,2,99,0.4);color:rgba(240,244,239,0.7)">Applications Every 6 Months</span>
+        </div>
+      </div>
+      <div class="tier-body">
+        <ul class="tier-list">
+          <li>Applications open exclusively to the pool of active Chapter Leaders, every 6 months</li>
+          <li>Departments: Events &amp; Curricula, PR &amp; Marketing, Secretariat, and Chapter Mentors</li>
+          <li>Work directly with the co-founders and core team as the backbone of FemiRISE</li>
+          <li>Weekly meetings required; absences must be notified to management in advance</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- CHAPTER MENTORS -->
+    <div class="mentor-box reveal" style="margin-top:3rem">
+      <div class="mentor-label">★ Chapter Mentors</div>
+      <div class="mentor-title">Guiding the next generation of leaders</div>
+      <p class="mentor-text">Chapter Mentors are a specialised group within the Committee — highly experienced individuals in the management and logistics of running chapters. They serve as trusted guides for Chapter Leaders navigating the complexities of building a local feminist community. A mentor can be requested by any Chapter Leader who needs additional support.</p>
+    </div>
+
+    <!-- ATTEND POLICIES -->
+    <div class="divider-line" style="margin:3rem 0"></div>
+    <div class="section-label" style="margin-bottom:1.5rem">Policies</div>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem">
+      <div class="glass-card reveal" style="padding:2rem">
+        <div class="pillar-title" style="margin-bottom:0.7rem;font-size:1rem">Event Frequency</div>
+        <p class="pillar-text">Chapter Leaders are expected to organise events <strong style="color:rgba(240,244,239,0.7);font-weight:400">at least once per month</strong>. Exceptions may be granted upon notifying management with sufficient notice.</p>
+      </div>
+      <div class="glass-card reveal" style="padding:2rem;transition-delay:0.1s">
+        <div class="pillar-title" style="margin-bottom:0.7rem;font-size:1rem">Impact Surveys</div>
+        <p class="pillar-text">After every event, chapter leaders must conduct <strong style="color:rgba(240,244,239,0.7);font-weight:400">impact surveys and documentation</strong>. This data shapes our strategy and demonstrates our collective footprint.</p>
+      </div>
+      <div class="glass-card reveal" style="padding:2rem;transition-delay:0.2s">
+        <div class="pillar-title" style="margin-bottom:0.7rem;font-size:1rem">Weekly Meetings</div>
+        <p class="pillar-text">Committee members attend <strong style="color:rgba(240,244,239,0.7);font-weight:400">weekly meetings</strong>. If absent, notify management beforehand — communication is the foundation of our collective.</p>
+      </div>
+      <div class="glass-card reveal" style="padding:2rem;transition-delay:0.3s">
+        <div class="pillar-title" style="margin-bottom:0.7rem;font-size:1rem">Applications</div>
+        <p class="pillar-text">Committee positions open <strong style="color:rgba(240,244,239,0.7);font-weight:400">every 6 months</strong> to active Chapter Leaders. This keeps leadership fresh, inclusive and grounded in chapter experience.</p>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:3.5rem" class="reveal">
+      <a class="btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfwPqKustc7kkd7kCYtFqLqy8rkv79rQlx8xS-8RfyrfZ6W7Q/viewform?usp=dialog" target="_blank"><span>Apply Now</span></a>
+      <a class="btn-ghost" href="https://calendly.com" target="_blank" style="margin-left:1rem">Book a Meeting</a>
+    </div>
+  </div>
+</div><!-- /page-how -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-logo">FemiRISE</span>
+      <p class="footer-about">A feminist organisation advancing literacy, community and innovation — one chapter at a time. Rise together.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Navigate</div>
+      <ul class="footer-links">
+        <li><a onclick="showPage('home')">Home</a></li>
+        <li><a onclick="showPage('about')">About Us</a></li>
+        <li><a onclick="showPage('how')">How We Work</a></li>
+        <li><a onclick="showPage('essays')">Essays</a></li>
+        <li><a onclick="showPage('connect')">Connect</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Join</div>
+      <ul class="footer-links">
+        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfwPqKustc7kkd7kCYtFqLqy8rkv79rQlx8xS-8RfyrfZ6W7Q/viewform?usp=dialog" target="_blank">General Member</a></li>
+        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfwPqKustc7kkd7kCYtFqLqy8rkv79rQlx8xS-8RfyrfZ6W7Q/viewform?usp=dialog" target="_blank">Chapter Leader</a></li>
+        <li><a href="https://calendly.com" target="_blank">Book a Meeting</a></li>
+        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfwPqKustc7kkd7kCYtFqLqy8rkv79rQlx8xS-8RfyrfZ6W7Q/viewform?usp=dialog" target="_blank">Submit Essay</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Social</div>
+      <ul class="footer-links">
+        <li><a href="https://instagram.com/femirise" target="_blank">Instagram</a></li>
+        <li><a href="https://tiktok.com/@femirise" target="_blank">TikTok</a></li>
+        <li><a href="https://twitter.com/femiriseorg" target="_blank">X / Twitter</a></li>
+        <li><a href="https://linkedin.com/company/femirise" target="_blank">LinkedIn</a></li>
+        <li><a href="https://facebook.com/femirise" target="_blank">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 FemiRISE. All rights reserved.</span>
+    <span style="display:flex;align-items:center;gap:0.5rem">
+      <span style="width:6px;height:6px;border-radius:50%;background:rgba(130,2,99,0.7);display:inline-block"></span>
+      Rise Together
+    </span>
+  </div>
+</footer>
+</body>
+</html>

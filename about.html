@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,26 +7,37 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Cormorant+Upright:wght@300;400;500&family=Jost:wght@200;300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./index.css">
-<script src="./index.js" defer></script>
+<link rel="stylesheet" href="./style.css">
+<script src="./script.js" defer></script>
 </head>
+<body>
 <nav id="mainNav">
-
-  <div class="nav-logo" onclick="showPage('home')">FemiRISE</div>
+  <div class="nav-logo"><a href="index.html"><img src="./media/femirise-logo.png"></a></div>
   <div class="nav-links">
-    <a href="index.html" class="nav-link" onclick="showPage('home')" data-page="home">Home</a>
-    <a href="about.html" class="nav-link" data-page="about">About Us</a>
-    <a class="nav-link" onclick="showPage('how')" data-page="how">How We Work</a>
-    <a class="nav-link" onclick="showPage('essays')" data-page="essays">Essays</a>
-    <a class="nav-link" onclick="showPage('connect')" data-page="connect">Connect</a>
-    <a class="nav-cta" href="https://forms.google.com" target="_blank">Join Now</a>
+    <a href="index.html" class="nav-link" data-page="home">Home</a>
+    <a href="about.html" class="nav-link active" data-page="about">About Us</a>
+    <a href="structure.html" class="nav-link" data-page="how">How We Work</a>
+    <a href="essays.html" class="nav-link" data-page="essays">Essays</a>
+    <a href="connect.html" class="nav-link" data-page="connect">Connect</a>
+    <a class="nav-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSfwPqKustc7kkd7kCYtFqLqy8rkv79rQlx8xS-8RfyrfZ6W7Q/viewform?usp=dialog" target="_blank">Join Now</a>
   </div>
   <div class="nav-hamburger" onclick="toggleMobile()">
     <span></span><span></span><span></span>
   </div>
 </nav>
 
-<div id="page-about" class="page">
+<!-- Mobile menu -->
+<div id="mobileMenu" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(5,0,12,0.97);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;backdrop-filter:blur(30px)">
+  <div style="position:absolute;top:1.4rem;right:1.5rem;font-size:1.5rem;color:rgba(203,156,242,0.7);cursor:pointer" onclick="toggleMobile()">✕</div>
+  <a href="index.html" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--ivory);text-decoration:none;cursor:pointer" onclick="showPage('home');toggleMobile()">Home</a>
+  <a href="about.html" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--ivory);text-decoration:none;cursor:pointer" onclick="showPage('about');toggleMobile()">About Us</a>
+  <a href="structure.html" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--ivory);text-decoration:none;cursor:pointer" onclick="showPage('how');toggleMobile()">How We Work</a>
+  <a href="essays.html" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--ivory);text-decoration:none;cursor:pointer" onclick="showPage('essays');toggleMobile()">Essays</a>
+  <a href="connect.html" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--ivory);text-decoration:none;cursor:pointer" onclick="showPage('connect');toggleMobile()">Connect</a>
+  <a class="btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfwPqKustc7kkd7kCYtFqLqy8rkv79rQlx8xS-8RfyrfZ6W7Q/viewform?usp=dialog" target="_blank"><span>Join Now</span></a>
+</div>
+
+<div id="page-home" class="page active reveal">
   <div class="about-hero">
     <div class="about-intro">
       <div>
@@ -83,7 +94,7 @@
           <p class="value-desc">Pioneering programs, initiatives and technologies designed to enhance the safety, wellbeing and empowerment of women.</p>
         </div>
         <div class="value-card reveal" style="transition-delay:0.5s;background:rgba(130,2,99,0.08);border-color:rgba(130,2,99,0.25)">
-          <div class="value-num" style="color:rgba(203,156,242,0.3)">∞</div>
+          <div class="value-num">∞</div>
           <div class="value-name">Scalable Impact</div>
           <p class="value-desc">Through chapters, mentorship and a transparent committee system, we build an organisation that grows with intention and integrity.</p>
         </div>
@@ -98,16 +109,39 @@
     <div class="section-inner">
       <div class="section-label">The People</div>
       <h2 class="section-title reveal">Meet our <em>core team</em></h2>
+      <div class="team-section">
+
+  <h3 class="team-group-title">Co-Founders</h3>
+  <div class="team-row">
+    <div class="team-card"><img src="https://static.wixstatic.com/media/1c8165_c51ba26651244f5a820a19ea73cc66af~mv2.jpeg/v1/fill/w_312,h_382,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/image0.jpeg" class="team-pfp"><div class="person-name">Vyonnie Khoo Yung Tse </div>
+    <div class="team-desc">Vyonnie is currently an A-Level student at Sunway College and is driven to make a difference. With a unique blend of experience in the arts (music, theatre, dance), public speaking (debate, Model UN), and STEM (math+science competitions, self-initiated learning), she is determined to incorporate interdisciplinary learning as the new norm.</div></div>
+    <div class="team-card"><img src="rusheng.png" class="team-pfp"><div class="person-name">Tay Ru Sheng</div> <div class="team-desc">This is a good co-founder.</div></div>
+  </div>
+
+  <h3 class="team-group-title">Secretariat</h3>
+  <div class="team-row">
+    <div class="team-card"><img src="doua.png" class="team-pfp"><div class="person-name">Doua</div> <div class="team-desc">This is a good secretary.</div></div>
+    
+  </div>
+
+  <h3 class="team-group-title">PR & Marketing</h3>
+  <div class="team-row">
+    <div class="team-card"><img src="jing.png" class="team-pfp"><div class="person-name">Leong Jing</div></div>
+  </div>
+</div>
+</section>
+      <!-- <h3 class="section-title reveal">Co-founders</h3>
       <div class="team-grid">
-        <div class="team-card reveal">
-          <div class="team-avatar">T</div>
-          <div class="team-name">Tay Ru Sheng</div>
-          <div class="team-role">Co-Founder</div>
-          <div class="team-dept">Strategic Vision &amp; Leadership</div>
-        </div>
+        
         <div class="team-card reveal" style="transition-delay:0.1s">
           <div class="team-avatar">V</div>
           <div class="team-name">Vyonnie Khoo Yung Tse</div>
+          <div class="team-role">Co-Founder</div>
+          <div class="team-dept">Strategic Vision &amp; Leadership</div>
+        </div>
+        <div class="team-card reveal">
+          <div class="team-avatar">T</div>
+          <div class="team-name">Tay Ru Sheng</div>
           <div class="team-role">Co-Founder</div>
           <div class="team-dept">Strategic Vision &amp; Leadership</div>
         </div>
@@ -122,9 +156,54 @@
           <div class="team-name">Leong Jing</div>
           <div class="team-role">PR &amp; Marketing</div>
           <div class="team-dept">Outreach &amp; Communications</div>
-        </div>
-      </div>
-    </div>
-  </section>
+        </div> -->
+      <!-- </div> -->
+    
+  
 </div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-logo">FemiRISE</span>
+      <p class="footer-about">A feminist organisation advancing literacy, community and innovation — one chapter at a time. Rise together.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Navigate</div>
+      <ul class="footer-links">
+        <li><a onclick="showPage('home')">Home</a></li>
+        <li><a onclick="showPage('about')">About Us</a></li>
+        <li><a onclick="showPage('how')">How We Work</a></li>
+        <li><a onclick="showPage('essays')">Essays</a></li>
+        <li><a onclick="showPage('connect')">Connect</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Join</div>
+      <ul class="footer-links">
+        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfwPqKustc7kkd7kCYtFqLqy8rkv79rQlx8xS-8RfyrfZ6W7Q/viewform?usp=dialog" target="_blank">General Member</a></li>
+        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfwPqKustc7kkd7kCYtFqLqy8rkv79rQlx8xS-8RfyrfZ6W7Q/viewform?usp=dialog" target="_blank">Chapter Leader</a></li>
+        <li><a href="https://calendly.com" target="_blank">Book a Meeting</a></li>
+        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfwPqKustc7kkd7kCYtFqLqy8rkv79rQlx8xS-8RfyrfZ6W7Q/viewform?usp=dialog" target="_blank">Submit Essay</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Social</div>
+      <ul class="footer-links">
+        <li><a href="https://instagram.com/femirise" target="_blank">Instagram</a></li>
+        <li><a href="https://tiktok.com/@femirise" target="_blank">TikTok</a></li>
+        <li><a href="https://twitter.com/femiriseorg" target="_blank">X / Twitter</a></li>
+        <li><a href="https://linkedin.com/company/femirise" target="_blank">LinkedIn</a></li>
+        <li><a href="https://facebook.com/femirise" target="_blank">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 FemiRISE. All rights reserved.</span>
+    <span style="display:flex;align-items:center;gap:0.5rem">
+      <span style="width:6px;height:6px;border-radius:50%;background:rgba(130,2,99,0.7);display:inline-block"></span>
+      Rise Together
+    </span>
+  </div>
+</footer>
+</body>
 </html>

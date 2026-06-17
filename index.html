@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,14 +20,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Cormorant+Upright:wght@300;400;500&family=Jost:wght@200;300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./index.css">
-<script src="./index.js" defer></script>
+<link rel="stylesheet" href="./style.css">
+<script src="./script.js" defer></script>
 </head>
 <body>
-
-<!-- Custom Cursor -->
-<div class="cursor" id="cursor"></div>
-<div class="cursor-trail" id="cursorTrail"></div>
 
 <!-- Global BG Blobs 
 <div class="bg-blobs">
@@ -41,14 +37,15 @@ Liquid blob that follows mouse loosely
 
 <!-- NAV -->
 <nav id="mainNav">
-  <div class="nav-logo" onclick="showPage('home')"><img src="./media/femirise-logo.png"></div>
+  <div class="nav-logo"><a href="index.html"><img src="./media/femirise-logo.png"></a></div>
   <div class="nav-links">
-    <a class="nav-link active" onclick="showPage('home')" data-page="home">Home</a>
+    <a href="index.html" class="nav-link active" data-page="home">Home</a>
     <a href="about.html" class="nav-link" data-page="about">About Us</a>
-    <a class="nav-link" onclick="showPage('how')" data-page="how">How We Work</a>
-    <a class="nav-link" onclick="showPage('essays')" data-page="essays">Essays</a>
-    <a class="nav-link" onclick="showPage('connect')" data-page="connect">Connect</a>
-    <a class="nav-cta" href="https://forms.google.com" target="_blank">Join Now</a>
+    <a href="structure.html" class="nav-link" data-page="how">How We Work</a>
+    <a href="essays.html" class="nav-link" data-page="essays">Essays</a>
+    <a href="connect.html" class="nav-link" data-page="connect">Connect</a>
+    <a class="nav-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSfwPqKustc7kkd7kCYtFqLqy8rkv79rQlx8xS-8RfyrfZ6W7Q/viewform?usp=dialog" target="_blank">Join Now</a>
+    <!-- <button id="themeToggle" class="nav-cta">☀️/🌑</button> -->
   </div>
   <div class="nav-hamburger" onclick="toggleMobile()">
     <span></span><span></span><span></span>
@@ -58,19 +55,19 @@ Liquid blob that follows mouse loosely
 <!-- Mobile menu -->
 <div id="mobileMenu" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(5,0,12,0.97);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;backdrop-filter:blur(30px)">
   <div style="position:absolute;top:1.4rem;right:1.5rem;font-size:1.5rem;color:rgba(203,156,242,0.7);cursor:pointer" onclick="toggleMobile()">✕</div>
-  <a style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--ivory);text-decoration:none;cursor:pointer" onclick="showPage('home');toggleMobile()">Home</a>
-  <a style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--ivory);text-decoration:none;cursor:pointer" onclick="showPage('about');toggleMobile()">About Us</a>
-  <a style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--ivory);text-decoration:none;cursor:pointer" onclick="showPage('how');toggleMobile()">How We Work</a>
-  <a style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--ivory);text-decoration:none;cursor:pointer" onclick="showPage('essays');toggleMobile()">Essays</a>
-  <a style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--ivory);text-decoration:none;cursor:pointer" onclick="showPage('connect');toggleMobile()">Connect</a>
-  <a class="btn-primary" href="https://forms.google.com" target="_blank"><span>Join Now</span></a>
+  <a href="index.html" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--ivory);text-decoration:none;cursor:pointer" onclick="showPage('home');toggleMobile()">Home</a>
+  <a href="about.html" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--ivory);text-decoration:none;cursor:pointer" onclick="showPage('about');toggleMobile()">About Us</a>
+  <a href="structure.html" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--ivory);text-decoration:none;cursor:pointer" onclick="showPage('how');toggleMobile()">How We Work</a>
+  <a href="essays.html" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--ivory);text-decoration:none;cursor:pointer" onclick="showPage('essays');toggleMobile()">Essays</a>
+  <a href="connect.html" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--ivory);text-decoration:none;cursor:pointer" onclick="showPage('connect');toggleMobile()">Connect</a>
+  <a class="btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfwPqKustc7kkd7kCYtFqLqy8rkv79rQlx8xS-8RfyrfZ6W7Q/viewform?usp=dialog" target="_blank"><span>Join Now</span></a>
 </div>
 
 <!-- ============ PAGE: HOME ============ -->
 <div id="page-home" class="page active">
 
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero reveal" >
     <!-- <div class="orbit-ring orbit-ring-1"><div class="orbit-dot"></div></div>
     <div class="orbit-ring orbit-ring-2"></div> -->
 
@@ -94,7 +91,7 @@ Liquid blob that follows mouse loosely
     </p>
 
     <div class="hero-actions">
-      <a class="btn-primary" href="https://forms.google.com" target="_blank"><span>Join the Movement</span></a>
+      <a class="btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfwPqKustc7kkd7kCYtFqLqy8rkv79rQlx8xS-8RfyrfZ6W7Q/viewform?usp=dialog" target="_blank"><span>Join the Movement</span></a>
       <a class="btn-ghost" onclick="showPage('about')">Our Mission</a>
     </div>
 
@@ -203,7 +200,7 @@ Liquid blob that follows mouse loosely
         </div>
       </div>
       <div style="text-align:center;margin-top:2.5rem">
-        <a class="btn-ghost" onclick="showPage('how')">Full Structure ↗</a>
+        <a href="structure.html" class="btn-ghost">Full Structure ↗</a>
       </div>
     </div>
   </section>
@@ -211,12 +208,12 @@ Liquid blob that follows mouse loosely
   <!-- CTA BAND -->
   <section style="padding:5rem 4rem;position:relative;z-index:2;text-align:center">
     <div style="max-width:700px;margin:0 auto">
-      <h2 class="section-title reveal" style="margin-bottom:1rem">Ready to <em>rise?</em></h2>
+      <h2 class="section-title reveal" style="margin-bottom:1rem">Ready to <em>rise</em>?</h2>
       <p style="font-family:'Jost',sans-serif;font-weight:300;font-size:0.92rem;color:rgba(240,244,239,0.55);line-height:1.85;margin-bottom:2.5rem" class="reveal">
-        Whether you're discovering feminism for the first time or ready to lead a chapter in your city — there is a place for you at FemiRISE.
+        Whether you're discovering feminism for the first time or ready to lead a chapter in your city, there is a place for you at FemiRISE.
       </p>
       <div class="hero-actions reveal" style="margin-bottom:0">
-        <a class="btn-primary" href="https://forms.google.com" target="_blank"><span>Join as Member</span></a>
+        <a class="btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfwPqKustc7kkd7kCYtFqLqy8rkv79rQlx8xS-8RfyrfZ6W7Q/viewform?usp=dialog" target="_blank"><span>Join as Member</span></a>
         <a class="btn-ghost" href="https://calendly.com" target="_blank">Book a Meeting</a>
       </div>
     </div>
@@ -232,22 +229,22 @@ Liquid blob that follows mouse loosely
       <h2 class="section-title reveal">How the <em>committee</em> is structured</h2>
       <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;margin-top:2rem">
         <div class="glass-card reveal" style="padding:2rem">
-          <div class="pillar-icon" style="font-size:1.2rem">🗓️</div>
+          <div class="pillar-icon" style="font-size:1.2rem"></div>
           <div class="pillar-title" style="margin-bottom:0.5rem">Events &amp; Curricula</div>
           <p class="pillar-text">Plans, curates and executes educational events, programs and learning experiences that advance our feminist mission.</p>
         </div>
         <div class="glass-card reveal" style="padding:2rem;transition-delay:0.1s">
-          <div class="pillar-icon" style="font-size:1.2rem">📣</div>
+          <div class="pillar-icon" style="font-size:1.2rem"></div>
           <div class="pillar-title" style="margin-bottom:0.5rem">PR &amp; Marketing</div>
           <p class="pillar-text">Manages our public presence, brand, campaigns and communications to grow our reach and community.</p>
         </div>
         <div class="glass-card reveal" style="padding:2rem;transition-delay:0.2s">
-          <div class="pillar-icon" style="font-size:1.2rem">📋</div>
+          <div class="pillar-icon" style="font-size:1.2rem"></div>
           <div class="pillar-title" style="margin-bottom:0.5rem">Secretariat</div>
           <p class="pillar-text">The operational backbone — handling administration, documentation, internal coordination and governance.</p>
         </div>
         <div class="glass-card reveal" style="padding:2rem;transition-delay:0.3s">
-          <div class="pillar-icon" style="font-size:1.2rem">⭐</div>
+          <div class="pillar-icon" style="font-size:1.2rem"></div>
           <div class="pillar-title" style="margin-bottom:0.5rem">Chapter Mentors</div>
           <p class="pillar-text">Highly experienced leaders who guide chapter leaders through the logistics and challenges of building local chapters.</p>
         </div>
@@ -256,273 +253,6 @@ Liquid blob that follows mouse loosely
   </section>
 </div><!-- /page-about -->
 
-<!-- ============ PAGE: HOW WE WORK ============ -->
-<div id="page-how" class="page">
-  <div class="tiers-wrap">
-    <div class="section-label" style="margin-bottom:1rem">Membership</div>
-    <h1 class="section-title reveal" style="margin-bottom:0.5rem">How we <em>work together</em></h1>
-    <p style="font-family:'Jost',sans-serif;font-weight:300;font-size:0.92rem;color:rgba(240,244,239,0.5);line-height:1.85;max-width:580px;margin-bottom:4rem" class="reveal">
-      FemiRISE operates through three interconnected membership tiers, each designed for a different level of commitment and impact.
-    </p>
-
-    <!-- TIER 1 -->
-    <div class="tier-section glass-card reveal" style="padding:2.5rem">
-      <div class="tier-header">
-        <div class="tier-badge">I</div>
-        <div>
-          <div class="tier-label">Tier One</div>
-          <div class="tier-name">General Members</div>
-          <span class="tier-commit">Low Commitment</span>
-        </div>
-      </div>
-      <div class="tier-body">
-        <ul class="tier-list">
-          <li>Participate in events, initiatives and programs hosted by the organisation</li>
-          <li>Join existing chapters in their region, state or country</li>
-          <li>Apply to be a Chapter Leader if no chapter exists in your region yet</li>
-        </ul>
-        <div class="steps-flow" style="margin-top:2.5rem">
-          <div style="font-family:'Jost',sans-serif;font-weight:200;font-size:0.7rem;letter-spacing:0.25em;text-transform:uppercase;color:rgba(203,156,242,0.5);margin-bottom:1.2rem">Getting Started</div>
-          <div class="step-item">
-            <div class="step-num-wrap"><div class="step-num">1</div><div class="step-line-v"></div></div>
-            <div class="step-content">
-              <div class="step-title">Fill in the Recruitment Form</div>
-              <p class="step-desc">Complete our <a href="https://forms.google.com" target="_blank" style="color:var(--lavender)">general member application form</a> — it takes just a few minutes.</p>
-            </div>
-          </div>
-          <div class="step-item">
-            <div class="step-num-wrap"><div class="step-num">2</div></div>
-            <div class="step-content">
-              <div class="step-title">Receive Email Updates</div>
-              <p class="step-desc">We'll email you with updates on upcoming events, programs and initiatives relevant to you.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="tier-connector"></div>
-
-    <!-- TIER 2 -->
-    <div class="tier-section glass-card reveal" style="padding:2.5rem">
-      <div class="tier-header">
-        <div class="tier-badge">II</div>
-        <div>
-          <div class="tier-label">Tier Two</div>
-          <div class="tier-name">Chapter Leaders</div>
-          <span class="tier-commit">High Impact</span>
-        </div>
-      </div>
-      <div class="tier-body">
-        <ul class="tier-list">
-          <li>Establish and officially register a chapter in your region, state or country</li>
-          <li>Recruit and lead a team to organise events — minimum once per month (exceptions granted with management notification)</li>
-          <li>Survey and document the impact of each event — this is mandatory and integral to our mission</li>
-          <li>A Chapter Mentor can be assigned upon request to guide you through the process</li>
-        </ul>
-        <div class="steps-flow" style="margin-top:2.5rem">
-          <div style="font-family:'Jost',sans-serif;font-weight:200;font-size:0.7rem;letter-spacing:0.25em;text-transform:uppercase;color:rgba(203,156,242,0.5);margin-bottom:1.2rem">Getting Started</div>
-          <div class="step-item">
-            <div class="step-num-wrap"><div class="step-num">1</div><div class="step-line-v"></div></div>
-            <div class="step-content">
-              <div class="step-title">Fill in the Recruitment Form</div>
-              <p class="step-desc">Submit your <a href="https://forms.google.com" target="_blank" style="color:var(--lavender)">Chapter Leader application</a> with your region and initial vision.</p>
-            </div>
-          </div>
-          <div class="step-item">
-            <div class="step-num-wrap"><div class="step-num">2</div><div class="step-line-v"></div></div>
-            <div class="step-content">
-              <div class="step-title">Schedule a Committee Meeting</div>
-              <p class="step-desc">Book a session via <a href="https://calendly.com" target="_blank" style="color:var(--lavender)">Calendly</a> to confirm your position. Come prepared with questions and a rough plan.</p>
-            </div>
-          </div>
-          <div class="step-item">
-            <div class="step-num-wrap"><div class="step-num">3</div><div class="step-line-v"></div></div>
-            <div class="step-content">
-              <div class="step-title">Establish Chapter Channels</div>
-              <p class="step-desc">Set up official communication channels (Instagram, Discord, WhatsApp etc.) aligned with local needs and organisational guidelines.</p>
-            </div>
-          </div>
-          <div class="step-item">
-            <div class="step-num-wrap"><div class="step-num">4</div></div>
-            <div class="step-content">
-              <div class="step-title">Begin Recruiting &amp; Your First Event</div>
-              <p class="step-desc">Start building your local team and plan your inaugural event. You've got this — and we're here to support you every step of the way.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="tier-connector"></div>
-
-    <!-- TIER 3 -->
-    <div class="tier-section glass-card reveal" style="padding:2.5rem;border-color:rgba(203,156,242,0.2)">
-      <div class="tier-header">
-        <div class="tier-badge" style="background:linear-gradient(135deg,rgba(203,156,242,0.3),rgba(130,2,99,0.2));border-color:rgba(203,156,242,0.5)">III</div>
-        <div>
-          <div class="tier-label">Tier Three</div>
-          <div class="tier-name">Committee Members</div>
-          <span class="tier-commit" style="background:rgba(130,2,99,0.15);border-color:rgba(130,2,99,0.4);color:rgba(240,244,239,0.7)">Applications Every 6 Months</span>
-        </div>
-      </div>
-      <div class="tier-body">
-        <ul class="tier-list">
-          <li>Applications open exclusively to the pool of active Chapter Leaders, every 6 months</li>
-          <li>Departments: Events &amp; Curricula, PR &amp; Marketing, Secretariat, and Chapter Mentors</li>
-          <li>Work directly with the co-founders and core team as the backbone of FemiRISE</li>
-          <li>Weekly meetings required; absences must be notified to management in advance</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- CHAPTER MENTORS -->
-    <div class="mentor-box reveal" style="margin-top:3rem">
-      <div class="mentor-label">★ Chapter Mentors</div>
-      <div class="mentor-title">Guiding the next generation of leaders</div>
-      <p class="mentor-text">Chapter Mentors are a specialised group within the Committee — highly experienced individuals in the management and logistics of running chapters. They serve as trusted guides for Chapter Leaders navigating the complexities of building a local feminist community. A mentor can be requested by any Chapter Leader who needs additional support.</p>
-    </div>
-
-    <!-- ATTEND POLICIES -->
-    <div class="divider-line" style="margin:3rem 0"></div>
-    <div class="section-label" style="margin-bottom:1.5rem">Policies</div>
-    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem">
-      <div class="glass-card reveal" style="padding:2rem">
-        <div class="pillar-title" style="margin-bottom:0.7rem;font-size:1rem">📅 Event Frequency</div>
-        <p class="pillar-text">Chapter Leaders are expected to organise events <strong style="color:rgba(240,244,239,0.7);font-weight:400">at least once per month</strong>. Exceptions may be granted upon notifying management with sufficient notice.</p>
-      </div>
-      <div class="glass-card reveal" style="padding:2rem;transition-delay:0.1s">
-        <div class="pillar-title" style="margin-bottom:0.7rem;font-size:1rem">📊 Impact Surveys</div>
-        <p class="pillar-text">After every event, chapter leaders must conduct <strong style="color:rgba(240,244,239,0.7);font-weight:400">impact surveys and documentation</strong>. This data shapes our strategy and demonstrates our collective footprint.</p>
-      </div>
-      <div class="glass-card reveal" style="padding:2rem;transition-delay:0.2s">
-        <div class="pillar-title" style="margin-bottom:0.7rem;font-size:1rem">📆 Weekly Meetings</div>
-        <p class="pillar-text">Committee members attend <strong style="color:rgba(240,244,239,0.7);font-weight:400">weekly meetings</strong>. If absent, notify management beforehand — communication is the foundation of our collective.</p>
-      </div>
-      <div class="glass-card reveal" style="padding:2rem;transition-delay:0.3s">
-        <div class="pillar-title" style="margin-bottom:0.7rem;font-size:1rem">⚖️ Applications</div>
-        <p class="pillar-text">Committee positions open <strong style="color:rgba(240,244,239,0.7);font-weight:400">every 6 months</strong> to active Chapter Leaders. This keeps leadership fresh, inclusive and grounded in chapter experience.</p>
-      </div>
-    </div>
-
-    <div style="text-align:center;margin-top:3.5rem" class="reveal">
-      <a class="btn-primary" href="https://forms.google.com" target="_blank"><span>Apply Now</span></a>
-      <a class="btn-ghost" href="https://calendly.com" target="_blank" style="margin-left:1rem">Book a Meeting</a>
-    </div>
-  </div>
-</div><!-- /page-how -->
-
-<!-- ============ PAGE: ESSAYS ============ -->
-<div id="page-essays" class="page">
-  <div class="essays-wrap">
-    <div class="section-label" style="margin-bottom:1rem">Feminist Writing</div>
-    <h1 class="section-title reveal" style="margin-bottom:0.8rem">Essays &amp; <em>perspectives</em></h1>
-    <p style="font-family:'Jost',sans-serif;font-weight:300;font-size:0.92rem;color:rgba(240,244,239,0.5);line-height:1.85;max-width:580px;margin-bottom:2.5rem" class="reveal">
-      Long-form thinking on feminism — from theory to lived experience. Written by our team, members and guest contributors.
-    </p>
-
-    <div class="essays-filter reveal">
-      <button class="filter-btn active" onclick="filterEssays('all',this)">All</button>
-      <button class="filter-btn" onclick="filterEssays('theory',this)">Theory</button>
-      <button class="filter-btn" onclick="filterEssays('history',this)">History</button>
-      <button class="filter-btn" onclick="filterEssays('policy',this)">Policy</button>
-      <button class="filter-btn" onclick="filterEssays('culture',this)">Culture</button>
-      <button class="filter-btn" onclick="filterEssays('personal',this)">Personal Essays</button>
-    </div>
-
-    <div class="essays-grid" id="essaysGrid">
-      <!-- Essays rendered by JS -->
-    </div>
-
-    <div style="text-align:center;margin-top:4rem;padding:3rem;border-radius:20px;background:rgba(130,2,99,0.06);border:1px solid rgba(203,156,242,0.1)">
-      <div class="section-label" style="justify-content:center;margin-bottom:0.8rem">Contribute</div>
-      <h3 style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:1.6rem;color:var(--ivory);margin-bottom:0.6rem">Have a story or essay to share?</h3>
-      <p style="font-family:'Jost',sans-serif;font-weight:300;font-size:0.88rem;color:rgba(240,244,239,0.5);line-height:1.7;margin-bottom:1.8rem">We welcome contributions from all members. Submit via our form and our editorial team will be in touch.</p>
-      <a class="btn-primary" href="https://forms.google.com" target="_blank"><span>Submit Your Essay</span></a>
-    </div>
-  </div>
-</div><!-- /page-essays -->
-
-<!-- ============ PAGE: CONNECT ============ -->
-<div id="page-connect" class="page">
-  <div class="connect-wrap">
-    <div class="section-label" style="margin-bottom:1rem">Get Involved</div>
-    <h1 class="section-title reveal" style="margin-bottom:0.8rem">Connect &amp; <em>join us</em></h1>
-    <p style="font-family:'Jost',sans-serif;font-weight:300;font-size:0.92rem;color:rgba(240,244,239,0.5);line-height:1.85;max-width:580px;margin-bottom:0" class="reveal">
-      Ready to take the next step? Whether joining as a member, scheduling a conversation, or following our journey — we're here.
-    </p>
-
-    <div class="connect-grid reveal">
-      <a class="connect-card" href="https://forms.google.com" target="_blank">
-        <div class="connect-icon">📋</div>
-        <div class="connect-card-title">Join as a General Member</div>
-        <p class="connect-card-desc">Fill in our membership form and become part of the growing FemiRISE community. Events, newsletters, and more await you.</p>
-        <div class="connect-cta-link">Apply Now →</div>
-      </a>
-      <a class="connect-card" href="https://forms.google.com" target="_blank">
-        <div class="connect-icon">🌍</div>
-        <div class="connect-card-title">Apply as Chapter Leader</div>
-        <p class="connect-card-desc">Ready to lead? Submit your Chapter Leader application and help establish feminism in your region.</p>
-        <div class="connect-cta-link">Apply Now →</div>
-      </a>
-      <a class="connect-card" href="https://calendly.com" target="_blank">
-        <div class="connect-icon">📅</div>
-        <div class="connect-card-title">Book a Meeting</div>
-        <p class="connect-card-desc">Schedule a one-on-one with a committee member to ask questions, confirm your position, or explore collaboration.</p>
-        <div class="connect-cta-link">Open Calendly →</div>
-      </a>
-      <a class="connect-card" href="https://forms.google.com" target="_blank">
-        <div class="connect-icon">✍️</div>
-        <div class="connect-card-title">Submit an Essay</div>
-        <p class="connect-card-desc">Share your feminist perspective, research, or personal essay with our community through our editorial platform.</p>
-        <div class="connect-cta-link">Submit Here →</div>
-      </a>
-    </div>
-
-    <!-- SOCIAL MEDIA -->
-    <div style="margin-top:4rem">
-      <div class="section-label" style="margin-bottom:1.2rem">Find Us Online</div>
-      <h3 style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:1.5rem;color:var(--ivory);margin-bottom:1.5rem">Follow <em>our journey</em></h3>
-      <div class="socials-row reveal">
-        <a class="social-pill" href="https://instagram.com/femirise" target="_blank">
-          <span class="social-icon">📸</span> @femirise
-        </a>
-        <a class="social-pill" href="https://tiktok.com/@femirise" target="_blank">
-          <span class="social-icon">🎵</span> @femirise
-        </a>
-        <a class="social-pill" href="https://twitter.com/femiriseorg" target="_blank">
-          <span class="social-icon">𝕏</span> @femiriseorg
-        </a>
-        <a class="social-pill" href="https://linkedin.com/company/femirise" target="_blank">
-          <span class="social-icon">💼</span> FemiRISE
-        </a>
-        <a class="social-pill" href="https://facebook.com/femirise" target="_blank">
-          <span class="social-icon">📘</span> FemiRISE
-        </a>
-      </div>
-    </div>
-
-    <!-- NEWSLETTER -->
-    <div class="newsletter-box reveal" style="margin-top:4rem">
-      <div class="section-label" style="justify-content:center;margin-bottom:0.8rem">Stay Updated</div>
-      <div class="newsletter-title">Join our newsletter</div>
-      <p class="newsletter-sub">Monthly dispatches of feminist news, event announcements, essays and movement updates — delivered with care.</p>
-      <div class="newsletter-form">
-        <input type="email" class="newsletter-input" placeholder="your@email.com">
-        <a class="btn-primary" href="https://forms.google.com" target="_blank"><span>Subscribe</span></a>
-      </div>
-    </div>
-
-    <!-- CONTACT -->
-    <div style="margin-top:3rem;padding:2.5rem;border-radius:20px;border:1px solid rgba(203,156,242,0.1);background:rgba(240,244,239,0.02)" class="reveal">
-      <div class="section-label" style="margin-bottom:0.8rem">Direct Contact</div>
-      <div style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--ivory);margin-bottom:0.5rem">General Enquiries</div>
-      <p style="font-family:'Jost',sans-serif;font-weight:300;font-size:0.88rem;color:rgba(240,244,239,0.5);line-height:1.7">
-        For chapter-specific queries, please head to our website and contact the respective chapter directly. For general organisational matters, reach us via our social channels or the form above.
-      </p>
-    </div>
-  </div>
-</div><!-- /page-connect -->
 
 <!-- FOOTER (always visible) -->
 <footer>
@@ -544,10 +274,10 @@ Liquid blob that follows mouse loosely
     <div>
       <div class="footer-col-title">Join</div>
       <ul class="footer-links">
-        <li><a href="https://forms.google.com" target="_blank">General Member</a></li>
-        <li><a href="https://forms.google.com" target="_blank">Chapter Leader</a></li>
+        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfwPqKustc7kkd7kCYtFqLqy8rkv79rQlx8xS-8RfyrfZ6W7Q/viewform?usp=dialog" target="_blank">General Member</a></li>
+        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfwPqKustc7kkd7kCYtFqLqy8rkv79rQlx8xS-8RfyrfZ6W7Q/viewform?usp=dialog" target="_blank">Chapter Leader</a></li>
         <li><a href="https://calendly.com" target="_blank">Book a Meeting</a></li>
-        <li><a href="https://forms.google.com" target="_blank">Submit Essay</a></li>
+        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfwPqKustc7kkd7kCYtFqLqy8rkv79rQlx8xS-8RfyrfZ6W7Q/viewform?usp=dialog" target="_blank">Submit Essay</a></li>
       </ul>
     </div>
     <div>
