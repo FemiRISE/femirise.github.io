@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FemiRISE — Feminist Organisation Since 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Cormorant+Upright:wght@300;400;500&family=Jost:wght@200;300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./index.css">
+<script src="./index.js" defer></script>
+</head>
+<nav id="mainNav">
+
+  <div class="nav-logo" onclick="showPage('home')">FemiRISE</div>
+  <div class="nav-links">
+    <a href="index.html" class="nav-link" onclick="showPage('home')" data-page="home">Home</a>
+    <a href="about.html" class="nav-link" data-page="about">About Us</a>
+    <a class="nav-link" onclick="showPage('how')" data-page="how">How We Work</a>
+    <a class="nav-link" onclick="showPage('essays')" data-page="essays">Essays</a>
+    <a class="nav-link" onclick="showPage('connect')" data-page="connect">Connect</a>
+    <a class="nav-cta" href="https://forms.google.com" target="_blank">Join Now</a>
+  </div>
+  <div class="nav-hamburger" onclick="toggleMobile()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div id="page-about" class="page">
+  <div class="about-hero">
+    <div class="about-intro">
+      <div>
+        <div class="section-label" style="margin-bottom:0.8rem">About FemiRISE</div>
+        <h1 class="section-title reveal" style="margin-bottom:1.2rem">Rooted in solidarity,<br><em>bold in vision</em></h1>
+        <div class="about-text">
+          <p class="reveal">FemiRISE was born from a conviction that feminist literacy is foundational to lasting change. We believe that understanding the <strong>history, theory and practice</strong> of feminism is not merely academic — it is the bedrock of every action we take.</p>
+          <p class="reveal">We are a <strong>decentralised, chapter-based organisation</strong> growing across regions, states and countries — united by shared values and a commitment to impact that is both measurable and deeply human.</p>
+          <p class="reveal">From safe storytelling spaces to bold innovation in technology, our work lives at the intersection of knowledge and action.</p>
+        </div>
+        <div style="margin-top:2rem" class="reveal">
+          <a class="btn-primary" onclick="showPage('connect')"><span>Connect With Us</span></a>
+        </div>
+      </div>
+      <div class="about-visual">
+        <div class="about-shape about-shape-1"></div>
+        <div class="about-shape about-shape-2"></div>
+        <div class="about-shape about-shape-3"></div>
+        <div class="about-ellipse about-ellipse-1"></div>
+        <div class="about-ellipse about-ellipse-2"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MISSION -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-label">Mission & Vision</div>
+      <h2 class="section-title reveal">Our <em>six pillars</em></h2>
+      <div class="values-grid">
+        <div class="value-card reveal">
+          <div class="value-num">01</div>
+          <div class="value-name">Feminist Literacy</div>
+          <p class="value-desc">Making feminism accessible. Including education on the core values of the feminist movement, our history, key figures, and feminist literature.</p>
+        </div>
+        <div class="value-card reveal" style="transition-delay:0.1s">
+          <div class="value-num">02</div>
+          <div class="value-name">Documentation and Archival</div>
+          <p class="value-desc">Documenting and sharing the latest global developments in feminism through essays, debates, and our podcast.</p>
+        </div>
+        <div class="value-card reveal" style="transition-delay:0.2s">
+          <div class="value-num">03</div>
+          <div class="value-name">Thoughtful Discourse</div>
+          <p class="value-desc">Fostering thoughtful, nuanced discussions and debates about feminism.</p>
+        </div>
+        <div class="value-card reveal" style="transition-delay:0.3s">
+          <div class="value-num">04</div>
+          <div class="value-name">Safe Space</div>
+          <p class="value-desc">A secure, supportive platform where women share their experiences, reclaim their narratives, and find community.</p>
+        </div>
+        <div class="value-card reveal" style="transition-delay:0.4s">
+          <div class="value-num">05</div>
+          <div class="value-name">Tech & Innovation</div>
+          <p class="value-desc">Pioneering programs, initiatives and technologies designed to enhance the safety, wellbeing and empowerment of women.</p>
+        </div>
+        <div class="value-card reveal" style="transition-delay:0.5s;background:rgba(130,2,99,0.08);border-color:rgba(130,2,99,0.25)">
+          <div class="value-num" style="color:rgba(203,156,242,0.3)">∞</div>
+          <div class="value-name">Scalable Impact</div>
+          <p class="value-desc">Through chapters, mentorship and a transparent committee system, we build an organisation that grows with intention and integrity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider-line" style="margin:0 4rem"></div>
+
+  <!-- TEAM -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-label">The People</div>
+      <h2 class="section-title reveal">Meet our <em>core team</em></h2>
+      <div class="team-grid">
+        <div class="team-card reveal">
+          <div class="team-avatar">T</div>
+          <div class="team-name">Tay Ru Sheng</div>
+          <div class="team-role">Co-Founder</div>
+          <div class="team-dept">Strategic Vision &amp; Leadership</div>
+        </div>
+        <div class="team-card reveal" style="transition-delay:0.1s">
+          <div class="team-avatar">V</div>
+          <div class="team-name">Vyonnie Khoo Yung Tse</div>
+          <div class="team-role">Co-Founder</div>
+          <div class="team-dept">Strategic Vision &amp; Leadership</div>
+        </div>
+        <div class="team-card reveal" style="transition-delay:0.2s">
+          <div class="team-avatar">D</div>
+          <div class="team-name">Douae</div>
+          <div class="team-role">Secretariat</div>
+          <div class="team-dept">Administration &amp; Operations</div>
+        </div>
+        <div class="team-card reveal" style="transition-delay:0.3s">
+          <div class="team-avatar">L</div>
+          <div class="team-name">Leong Jing</div>
+          <div class="team-role">PR &amp; Marketing</div>
+          <div class="team-dept">Outreach &amp; Communications</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</html>
