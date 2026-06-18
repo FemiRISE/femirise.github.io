@@ -13,6 +13,10 @@
   --glass-border-hover:rgba(203,156,242,0.45);
   --transition:0.4s cubic-bezier(0.23,1,0.32,1);
   --transition-fast:0.2s cubic-bezier(0.23,1,0.32,1);
+  --lavender-05: rgba(203,156,242,.05);
+  --lavender-10: rgba(203,156,242,.1);
+  --lavender-20: rgba(203,156,242,.2);
+  --lavender-50: rgba(203,156,242,.5);
 }
 html{scroll-behavior:smooth}
 body{
